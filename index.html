@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Андрей Малышев</title>
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --muted: #6b6b70;
+      --accent: #2f5d50;
+      --accent-hover: #24493f;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16181a;
+        --card: #212427;
+        --text: #f2f2f2;
+        --muted: #a0a3a8;
+        --accent: #5fa08d;
+        --accent-hover: #74b3a0;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .card {
+      width: 100%;
+      max-width: 420px;
+      padding: 48px 32px;
+      background: var(--card);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+    .avatar {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid var(--bg);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+    /* Фото увеличено и сдвинуто так, чтобы лицо оказалось в центре круга */
+    .avatar img {
+      position: absolute;
+      width: 136%;
+      max-width: none;
+      left: -12%;
+      top: -8%;
+    }
+    [hidden] { display: none !important; }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .role {
+      margin: 0 0 32px;
+      font-size: 17px;
+      color: var(--muted);
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="avatar">
+      <img src="photo.jpg" alt="Андрей Малышев" onerror="this.parentElement.hidden = true">
+    </div>
+    <h1>Андрей Малышев</h1>
+    <p class="role">Предприниматель</p>
+    <a class="btn" href="https://t.me/andmalyshev" target="_blank" rel="noopener">Написать мне</a>
+  </main>
+</body>
+</html>
